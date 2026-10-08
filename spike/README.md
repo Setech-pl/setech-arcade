@@ -49,10 +49,10 @@ sector 599 of its own disk.
 | Path | What |
 |---|---|
 | `harness/vs65-harness.c` | Scripted, headless atari800 (libatari800): input, screenshots, RAM peek/poke, waits, WAV, power cycle |
-| `harness/wasm-glue.c` | The C surface the WebAssembly build exports to JavaScript |
+| `../emulator/atari800/wasm-glue.c` | The C surface the WebAssembly build exports to JavaScript (moved there for the site) |
 | `scripts/lib/scenario.mjs` | The reference scenario, one script for the native and the browser runs |
 | `prototypes/shared/host.js` | Emulator-agnostic page host: picture, input, audio, pacing, IndexedDB saves, `window.vs` |
 | `prototypes/atari800-wasm/` | P1 core adapter + page |
 | `prototypes/sfotty-pie/` | P3 core adapter + page |
-| `proposals/` | Phase B drafts: the deploy workflow, a per-game data file |
+| `proposals/` | Phase B drafts, since adopted: `.github/workflows/deploy.yml`, `games/<id>.json` |
 | `results/` | Measured output; every file is written by a script above |

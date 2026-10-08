@@ -1,5 +1,14 @@
 # Spike: playing Void Strike 65 in the browser (Phase A)
 
+> **Decided (owner, 2026-10-08):** atari800 7.2.1 compiled to WebAssembly by
+> us, with its built-in AltirraOS, BASIC off; Sfotty Pie is plan B (pure
+> TypeScript, MIT; it needs a release with its real serial SIO first). This
+> document is the record of that choice; the site (Phase B) is described in
+> the [README](../README.md). The jsA8E failure is now reproduced with a
+> public test disk and written up for upstream in
+> [upstream/jsa8e-issue.md](upstream/jsa8e-issue.md): only the first of
+> several consecutive `SIOV` reads delivers data.
+
 Branch `spike/emulator`, 2026-10-08. The game is the **v0.2.2 release ATR**,
 SHA-256 `19b82947a3b280e05040d8200d96de81e2ae79b504e6d7f2c010579a4604c4d4`
 (matches GitHub's asset digest). Every run used a copy of it. How to
@@ -417,7 +426,7 @@ Sokoban needs only another file; a game that does not save sets
 
 - **Emulator:** atari800 7.2.1 `libatari800` → WebAssembly (Emscripten,
   pinned), AltirraOS 3.49 built in, BASIC off. Our C glue is ~70 lines
-  ([wasm-glue.c](../spike/harness/wasm-glue.c)).
+  ([wasm-glue.c](../emulator/atari800/wasm-glue.c)).
 - **Page:** plain HTML + ES modules, no framework. The host from the spike
   ([host.js](../spike/prototypes/shared/host.js)): canvas 2D, an AudioWorklet
   FIFO, keyboard/Gamepad/touch, IndexedDB disk saves, the `window.vs`

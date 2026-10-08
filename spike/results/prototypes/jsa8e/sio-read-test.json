@@ -1,0 +1,54 @@
+{
+  "jsa8e": "AnimaInCorpore/A8E @ ea88454",
+  "browser": "Chromium (Playwright)",
+  "results": [
+    {
+      "os": "AltirraOS 3.49",
+      "reads": 1,
+      "firstSector": 5,
+      "intact": 1,
+      "finished": true,
+      "dcbAfter": "3101520180400F0080000600"
+    },
+    {
+      "os": "AltirraOS 3.49",
+      "reads": 2,
+      "firstSector": 4,
+      "intact": 1,
+      "finished": true,
+      "dcbAfter": "3101520100410F0080000600"
+    },
+    {
+      "os": "AltirraOS 3.49",
+      "reads": 44,
+      "firstSector": 4,
+      "intact": 1,
+      "finished": true,
+      "dcbAfter": "3101520100560F0080003000"
+    },
+    {
+      "os": "Atari XL OS rev. 2",
+      "reads": 1,
+      "firstSector": 5,
+      "intact": 1,
+      "finished": true,
+      "dcbAfter": "3101520180400F0080000600"
+    },
+    {
+      "os": "Atari XL OS rev. 2",
+      "reads": 2,
+      "firstSector": 4,
+      "intact": 1,
+      "finished": true,
+      "dcbAfter": "3101520100410F0080000600"
+    },
+    {
+      "os": "Atari XL OS rev. 2",
+      "reads": 44,
+      "firstSector": 4,
+      "intact": 1,
+      "finished": true,
+      "dcbAfter": "3101520100560F0080003000"
+    }
+  ]
+}
