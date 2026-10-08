@@ -1,0 +1,21 @@
+{
+  "emulator": "Sfotty Pie @sfotty-pie/a8 from /Users/marcinkrzetowski/Projects/setech-arcade/spike/.cache/sfotty-pie/packages/a8/dist/index.js",
+  "frames": 10705,
+  "hostMs": 21479,
+  "error": null,
+  "marks": {
+    "menu": 499,
+    "gameplay": 1357,
+    "boss-entry": 4688,
+    "boss-band-live": 4899,
+    "level-end": 8600,
+    "menu-after-level": 8829,
+    "coldstart": 8929,
+    "menu-after-coldstart": 9425,
+    "menu-after-reset": 10605
+  },
+  "changedSectors": [
+    599
+  ],
+  "sector599": "5652019400000000"
+}

@@ -1,0 +1,30 @@
+{
+  "atari800-wasm": {
+    "1x": {
+      "msPerFrame": 0.07,
+      "budgetShare": "0%"
+    },
+    "4x": {
+      "msPerFrame": 0.29,
+      "budgetShare": "1%"
+    },
+    "6x": {
+      "msPerFrame": 0.44,
+      "budgetShare": "2%"
+    }
+  },
+  "sfotty-pie": {
+    "1x": {
+      "msPerFrame": 2.3,
+      "budgetShare": "11%"
+    },
+    "4x": {
+      "msPerFrame": 9.3,
+      "budgetShare": "46%"
+    },
+    "6x": {
+      "msPerFrame": 14.11,
+      "budgetShare": "71%"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+0 init os=xl basic=on machine=xl atr=/Users/marcinkrzetowski/Projects/setech-arcade/spike/work/reference/xl-basic-on/void-strike-65.atr
+0 watch 009A = 00
+1 note: ANTIC_dlist==0 (ignored)
+543 watch 009A 00 -> 01
+543 reached until 009A 01 after 543 frames
+543 mark menu
+
+543 wav /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/01-menu-music.wav (44100 Hz, 1 ch, 16-bit)
+643 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/01-menu.png
+1097 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/02-start-game-engaging.png
+1197 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/03-loader-panel.png
+1397 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/04-press-fire.png
+1398 watch 009A 01 -> 06
+1401 reached until 009A 06 after 0 frames
+1401 mark gameplay
+
+1551 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/05-gameplay-early.png
+2701 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/06-capital-corridor.png
+3001 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/07-capital-corridor-b.png
+4528 reached until 6DE8 4C after 1527 frames
+4528 mark boss-entry
+
+4588 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/08-boss-warning.png
+4733 reached until 0C40 55 after 145 frames
+4733 mark boss-band-live
+
+4973 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/09-boss-band.png
+5240 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/09b-boss-laser.png
+5250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0001.png
+5300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0002.png
+5350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0003.png
+5400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0004.png
+5450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0005.png
+5500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0006.png
+5550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0007.png
+5600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0008.png
+5650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0009.png
+5700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0010.png
+5750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0011.png
+5800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0012.png
+5850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0013.png
+5900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0014.png
+5950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0015.png
+6000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0016.png
+6050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0017.png
+6100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0018.png
+6150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0019.png
+6200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0020.png
+6250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0021.png
+6300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0022.png
+6350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0023.png
+6400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0024.png
+6450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0025.png
+6500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0026.png
+6550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0027.png
+6600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0028.png
+6650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0029.png
+6700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0030.png
+6750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0031.png
+6800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0032.png
+6850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0033.png
+6900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0034.png
+6950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0035.png
+7000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0036.png
+7050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0037.png
+7100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0038.png
+7150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0039.png
+7200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0040.png
+7250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0041.png
+7300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0042.png
+7350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0043.png
+7400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0044.png
+7450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0045.png
+7500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0046.png
+7550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0047.png
+7600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0048.png
+7650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0049.png
+7700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0050.png
+7750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0051.png
+7800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0052.png
+7850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0053.png
+7900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0054.png
+7950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0055.png
+8000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0056.png
+8050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0057.png
+8100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0058.png
+8150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0059.png
+8200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0060.png
+8250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0061.png
+8300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0062.png
+8350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0063.png
+8400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0064.png
+8450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0065.png
+8500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0066.png
+8550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0067.png
+8600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0068.png
+8650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0069.png
+8700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0070.png
+8750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0071.png
+8800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0072.png
+8850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0073.png
+8900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0074.png
+8950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0075.png
+9000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0076.png
+9050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0077.png
+9100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0078.png
+9150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0079.png
+9200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0080.png
+9250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0081.png
+9300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0082.png
+9350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0083.png
+9400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0084.png
+9450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0085.png
+9500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0086.png
+9550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/boss/0087.png
+9576 reached untildl 0B72 after 4336 frames
+9576 mark level-end
+
+9601 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/10-summary.png
+9801 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/11-summary-press-fire.png
+9802 watch 009A 06 -> 01
+9805 reached until 009A 01 after 0 frames
+9805 mark menu-after-level
+
+9905 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/12-menu-after-level.png
+9905 coldstart
+9905 mark coldstart
+
+9912 watch 009A 01 -> 00
+10448 watch 009A 00 -> 01
+10448 reached until 009A 01 after 443 frames
+10448 mark menu-after-coldstart
+
+10827 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/13-best-after-power-cycle.png
+10828 watch 009A 01 -> 06
+10831 reached until 009A 06 after 0 frames
+11131 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/14-before-reset.png
+11132 reset
+11138 watch 009A 06 -> 00
+11157 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/15-reset-25.png
+11257 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/16-reset-125.png
+11457 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/17-reset-325.png
+11674 watch 009A 00 -> 01
+11674 reached until 009A 01 after 217 frames
+11674 mark menu-after-reset
+
+11774 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/xl-basic-on/18-menu-after-reset.png
+11774 done

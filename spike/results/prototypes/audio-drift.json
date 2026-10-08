@@ -1,0 +1,132 @@
+{
+  "atari800-wasm": [
+    {
+      "s": 0,
+      "underruns": 0,
+      "dropped": 0,
+      "bufferedMs": 0,
+      "state": "running",
+      "rate": 44100,
+      "frame": 0
+    },
+    {
+      "s": 10,
+      "underruns": 10,
+      "dropped": 0,
+      "bufferedMs": 13,
+      "state": "running",
+      "rate": 44100,
+      "frame": 497
+    },
+    {
+      "s": 20,
+      "underruns": 10,
+      "dropped": 0,
+      "bufferedMs": 7,
+      "state": "running",
+      "rate": 44100,
+      "frame": 997
+    },
+    {
+      "s": 30,
+      "underruns": 12,
+      "dropped": 0,
+      "bufferedMs": 24,
+      "state": "running",
+      "rate": 44100,
+      "frame": 1495
+    },
+    {
+      "s": 40,
+      "underruns": 12,
+      "dropped": 0,
+      "bufferedMs": 18,
+      "state": "running",
+      "rate": 44100,
+      "frame": 1994
+    },
+    {
+      "s": 50,
+      "underruns": 12,
+      "dropped": 0,
+      "bufferedMs": 32,
+      "state": "running",
+      "rate": 44100,
+      "frame": 2492
+    },
+    {
+      "s": 60,
+      "underruns": 12,
+      "dropped": 0,
+      "bufferedMs": 27,
+      "state": "running",
+      "rate": 44100,
+      "frame": 2992
+    }
+  ],
+  "sfotty-pie": [
+    {
+      "s": 0,
+      "underruns": 0,
+      "dropped": 0,
+      "bufferedMs": 0,
+      "state": "running",
+      "rate": 44100,
+      "frame": 0
+    },
+    {
+      "s": 10,
+      "underruns": 7,
+      "dropped": 0,
+      "bufferedMs": 28,
+      "state": "running",
+      "rate": 44100,
+      "frame": 496
+    },
+    {
+      "s": 20,
+      "underruns": 8,
+      "dropped": 0,
+      "bufferedMs": 23,
+      "state": "running",
+      "rate": 44100,
+      "frame": 995
+    },
+    {
+      "s": 30,
+      "underruns": 8,
+      "dropped": 0,
+      "bufferedMs": 37,
+      "state": "running",
+      "rate": 44100,
+      "frame": 1494
+    },
+    {
+      "s": 40,
+      "underruns": 8,
+      "dropped": 0,
+      "bufferedMs": 12,
+      "state": "running",
+      "rate": 44100,
+      "frame": 1992
+    },
+    {
+      "s": 50,
+      "underruns": 8,
+      "dropped": 0,
+      "bufferedMs": 26,
+      "state": "running",
+      "rate": 44100,
+      "frame": 2492
+    },
+    {
+      "s": 60,
+      "underruns": 8,
+      "dropped": 0,
+      "bufferedMs": 20,
+      "state": "running",
+      "rate": 44100,
+      "frame": 2990
+    }
+  ]
+}

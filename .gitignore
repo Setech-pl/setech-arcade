@@ -1,0 +1,19 @@
+node_modules/
+spike/.cache/
+spike/bin/
+spike/work/
+spike/vendor/
+test-results/
+playwright-report/
+.DS_Store
+# re-created by spike/scripts (see spike/README.md)
+spike/assets/*.atr
+spike/prototypes/atari800-wasm/atari800.js
+spike/prototypes/atari800-wasm/atari800.wasm
+spike/prototypes/sfotty-pie/a8.bundle.js
+spike/results/reference/*/*.wav
+spike/results/reference/altirra-basic-on/boss/
+spike/results/reference/xl-basic-off/boss/
+spike/results/reference/xl-basic-on/boss/
+spike/results/p3-sfotty-pie/node/boss/
+spike/results/p3-sfotty-pie/node-own-palette/boss/

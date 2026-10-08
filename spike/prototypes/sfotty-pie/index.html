@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P3 Sfotty Pie</title>
+<style>
+  :root { color-scheme: dark; --bg: #0b0d10; --fg: #d8dde3; --muted: #8a939d; --accent: #e0a040; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  #stage { position: relative; display: grid; place-items: center; background: #000; }
+  /* Integer scaling of the 336x240 PAL picture; PAL pixels are ~1.03:1 wide,
+     close enough to square that the spike keeps square pixels. */
+  #screen { image-rendering: pixelated; width: calc(336px * var(--scale, 2)); height: calc(240px * var(--scale, 2)); max-width: 100%; }
+  @media (min-width: 1040px) { #screen { --scale: 3; } }
+  @media (max-width: 700px) { #screen { width: 100%; height: auto; } }
+  #start { position: absolute; inset: 0; display: grid; place-items: center; background: rgb(0 0 0 / .6); border: 0; color: var(--fg); font-size: 22px; cursor: pointer; }
+  #start[hidden] { display: none; }
+  #status, .help { color: var(--muted); }
+  .bar { display: flex; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+  button { background: #1c2128; color: var(--fg); border: 1px solid #333a44; border-radius: 6px; padding: 6px 10px; }
+  #touch { display: none; justify-content: space-between; margin-top: 12px; user-select: none; touch-action: none; }
+  @media (pointer: coarse) { #touch { display: flex; } }
+  .pad { display: grid; grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(3, 56px); gap: 4px; }
+  .pad button, #touch-fire { font-size: 20px; }
+  #touch-fire { width: 96px; height: 96px; border-radius: 50%; background: #5a1e1e; }
+</style>
+</head>
+<body>
+<main>
+  <div id="stage">
+    <canvas id="screen"></canvas>
+    <button id="start">Click to start (sound on)</button>
+  </div>
+  <div class="bar">
+    <button id="fullscreen">Fullscreen</button>
+    <button id="reset-score">Reset best score</button>
+    <span id="status">loading…</span>
+  </div>
+  <p class="help">Arrows / WASD: joystick · Z, X, Ctrl, Alt or Shift: fire · Space: pause · F4 START, F3 SELECT, F2 OPTION · F5 RESET · Gamepad: d-pad/stick, A/B fire, Start pause</p>
+  <div id="touch">
+    <div class="pad">
+      <span></span><button data-joy="1">▲</button><span></span>
+      <button data-joy="4">◀</button><span></span><button data-joy="8">▶</button>
+      <span></span><button data-joy="2">▼</button><span></span>
+    </div>
+    <button id="touch-fire">FIRE</button>
+  </div>
+</main>
+<script type="module">
+  import { startHost } from "../shared/host.js";
+  import { createCore } from "./core.js";
+  await startHost(createCore, { defaultAtr: "../../assets/void-strike-65.atr" });
+</script>
+</body>
+</html>

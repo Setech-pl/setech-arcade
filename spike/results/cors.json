@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-08T03:07:31.461Z",
+  "urls": {
+    "releaseDownload": "https://github.com/Setech-pl/void-strike-65/releases/download/v0.2.2/void-strike-65.atr",
+    "apiAsset": "https://api.github.com/repos/Setech-pl/void-strike-65/releases/assets/620334158",
+    "rawInRepo": "https://raw.githubusercontent.com/Setech-pl/void-strike-65/main/dist/void-strike-65.atr"
+  },
+  "results": {
+    "chromium": {
+      "releaseDownload": "FAILED: Failed to fetch",
+      "apiAsset": "FAILED: Failed to fetch",
+      "rawInRepo": "HTTP 200, 92176 bytes"
+    },
+    "firefox": {
+      "releaseDownload": "FAILED: NetworkError when attempting to fetch resource.",
+      "apiAsset": "FAILED: NetworkError when attempting to fetch resource.",
+      "rawInRepo": "HTTP 200, 92176 bytes"
+    },
+    "webkit": {
+      "releaseDownload": "FAILED: Load failed",
+      "apiAsset": "FAILED: Load failed",
+      "rawInRepo": "HTTP 200, 92176 bytes"
+    }
+  }
+}

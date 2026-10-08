@@ -1,0 +1,22 @@
+{
+  "atari800-native": {
+    "rate": 44100,
+    "seconds": 10.03,
+    "rms": 0.1339,
+    "zeroCrossingsPerSecond": 1850
+  },
+  "atari800-wasm": {
+    "rate": 44100,
+    "seconds": 10.03,
+    "rms": 0.1339,
+    "zeroCrossingsPerSecond": 1850,
+    "envelopeCorrelationWithNative": 1
+  },
+  "sfotty-pie": {
+    "rate": 44100,
+    "seconds": 10.03,
+    "rms": 0.0249,
+    "zeroCrossingsPerSecond": 1525,
+    "envelopeCorrelationWithNative": 0.447
+  }
+}

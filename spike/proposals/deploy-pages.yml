@@ -1,0 +1,46 @@
+# PROPOSAL for .github/workflows/deploy.yml (Phase B) - not active here.
+# Action versions and the emsdk pin are to be re-checked when it is adopted.
+# Builds the site and publishes it to GitHub Pages. Game disks are fetched
+# from their GitHub releases at build time (a browser cannot fetch release
+# assets directly: no CORS), verified against the SHA-256 in each game's data
+# file, and published next to the site.
+name: Deploy site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      # atari800 7.2.1 -> WebAssembly (pinned emsdk); the corresponding source
+      # tarball is published with the site for GPL section 3.
+      - uses: mymindstorm/setup-emsdk@v14
+        with: { version: 6.0.11 }   # the version the spike built with
+      - run: npm run build:emulator
+      - name: Fetch game disks from their releases
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: node scripts/fetch-games.mjs   # gh release download + SHA-256 check per games/*.json
+      - run: npm run build:site
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:smoke             # boots each game to its menu in Chromium
+      - uses: actions/upload-pages-artifact@v4
+        with: { path: dist }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

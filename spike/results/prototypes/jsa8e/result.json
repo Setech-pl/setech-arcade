@@ -1,0 +1,78 @@
+{
+  "jsa8e": "AnimaInCorpore/A8E @ ea88454 (jsA8E v1.3.0+)",
+  "browser": "chromium 156.0.8078.4",
+  "os": "AltirraOS 3.49",
+  "timeline": [
+    {
+      "second": 1,
+      "gameState": 0,
+      "pc": "$c1e6"
+    },
+    {
+      "second": 2,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 3,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 4,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 5,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 6,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 7,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 8,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 9,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 10,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 11,
+      "gameState": 0,
+      "pc": "$2625"
+    },
+    {
+      "second": 12,
+      "gameState": 0,
+      "pc": "$2625"
+    }
+  ],
+  "reachedMenu": false,
+  "stage2Error": {
+    "breakpointHit": true,
+    "failedCheck": "CRC of the chunk (ldy #$0A; cmp; STAGE2_FAIL_NE)",
+    "chunk": "sectors 108-151 into $8100-$96ff through OS SIOV",
+    "sectorsMatchingDisk": 0,
+    "sectorsWrong": 44,
+    "firstWrongSector": 108,
+    "nonZeroBytesInStaging": 126,
+    "expectedSectorsFoundElsewhereInRam": {}
+  }
+}

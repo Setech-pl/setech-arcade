@@ -1,0 +1,38 @@
+{
+  "$schema": "../game.schema.json",
+  "id": "void-strike-65",
+  "title": "Void Strike 65",
+  "studio": "Setech Game Studio",
+  "year": 2026,
+  "status": "pre-release",
+  "summary": "A vertical space shooter for the PAL Atari 65XE/800XL: one fighter, a capital-ship corridor, a boss at the end of the level.",
+  "screenshots": ["media/void-strike-65/menu.png", "media/void-strike-65/boss.png"],
+  "media": {
+    "atr": {
+      "repo": "Setech-pl/void-strike-65",
+      "release": "v0.2.2",
+      "asset": "void-strike-65.atr",
+      "sha256": "19b82947a3b280e05040d8200d96de81e2ae79b504e6d7f2c010579a4604c4d4"
+    }
+  },
+  "machine": { "model": "800xl", "ramKb": 64, "video": "pal", "basic": false },
+  "saves": { "kind": "disk", "note": "The best score per level is written to sector 599 of the game's own disk." },
+  "controls": {
+    "joystick": "port 1",
+    "keys": [
+      { "atari": "joystick", "keyboard": "Arrows / WASD", "gamepad": "D-pad / left stick" },
+      { "atari": "fire", "keyboard": "Z, X, Ctrl, Alt or Shift", "gamepad": "A / B" },
+      { "atari": "Space (pause)", "keyboard": "Space", "gamepad": "Start" }
+    ],
+    "touch": true
+  },
+  "links": {
+    "howToPlay": "https://github.com/Setech-pl/void-strike-65/blob/main/docs/how-to-play.md",
+    "source": "https://github.com/Setech-pl/void-strike-65"
+  },
+  "licence": {
+    "game": "CC BY-NC-SA 4.0 (the ATR as a whole); code MIT",
+    "credit": "(C) 2026 Setech Game Studio, Marcin Krzetowski",
+    "marks": "\"Void Strike 65\" and the Setech Game Studio name and logo: all rights reserved"
+  }
+}

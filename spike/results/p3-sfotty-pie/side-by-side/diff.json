@@ -1,0 +1,21 @@
+{
+  "01-menu": 0,
+  "02-start-game-engaging": 0,
+  "03-loader-panel": 345,
+  "04-press-fire": 345,
+  "05-gameplay-early": 0,
+  "06-capital-corridor": 0,
+  "07-capital-corridor-b": 0,
+  "08-boss-warning": 70,
+  "09-boss-band": 0,
+  "09b-boss-laser": 106,
+  "10-summary": 15,
+  "11-summary-press-fire": 395,
+  "12-menu-after-level": 0,
+  "13-best-after-power-cycle": 345,
+  "14-before-reset": 0,
+  "15-reset-25": 0,
+  "16-reset-125": 0,
+  "17-reset-325": 0,
+  "18-menu-after-reset": 0
+}

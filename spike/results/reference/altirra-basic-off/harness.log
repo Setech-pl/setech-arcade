@@ -1,0 +1,144 @@
+0 init os=altirra basic=off machine=xl atr=/Users/marcinkrzetowski/Projects/setech-arcade/spike/work/reference/altirra-basic-off/void-strike-65.atr
+0 watch 009A = 00
+1 note: ANTIC_dlist==0 (ignored)
+499 watch 009A 00 -> 01
+499 reached until 009A 01 after 499 frames
+499 mark menu
+
+499 wav /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/01-menu-music.wav (44100 Hz, 1 ch, 16-bit)
+599 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/01-menu.png
+1053 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/02-start-game-engaging.png
+1153 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/03-loader-panel.png
+1353 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/04-press-fire.png
+1354 watch 009A 01 -> 06
+1357 reached until 009A 06 after 0 frames
+1357 mark gameplay
+
+1507 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/05-gameplay-early.png
+2657 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/06-capital-corridor.png
+2957 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/07-capital-corridor-b.png
+4688 reached until 6DE8 4C after 1731 frames
+4688 mark boss-entry
+
+4748 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/08-boss-warning.png
+4893 reached until 0C40 55 after 145 frames
+4893 mark boss-band-live
+
+5133 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/09-boss-band.png
+5400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/09b-boss-laser.png
+5450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0001.png
+5500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0002.png
+5550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0003.png
+5600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0004.png
+5650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0005.png
+5700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0006.png
+5750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0007.png
+5800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0008.png
+5850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0009.png
+5900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0010.png
+5950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0011.png
+6000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0012.png
+6050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0013.png
+6100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0014.png
+6150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0015.png
+6200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0016.png
+6250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0017.png
+6300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0018.png
+6350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0019.png
+6400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0020.png
+6450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0021.png
+6500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0022.png
+6550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0023.png
+6600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0024.png
+6650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0025.png
+6700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0026.png
+6750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0027.png
+6800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0028.png
+6850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0029.png
+6900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0030.png
+6950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0031.png
+7000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0032.png
+7050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0033.png
+7100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0034.png
+7150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0035.png
+7200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0036.png
+7250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0037.png
+7300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0038.png
+7350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0039.png
+7400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0040.png
+7450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0041.png
+7500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0042.png
+7550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0043.png
+7600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0044.png
+7650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0045.png
+7700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0046.png
+7750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0047.png
+7800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0048.png
+7850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0049.png
+7900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0050.png
+7950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0051.png
+8000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0052.png
+8050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0053.png
+8100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0054.png
+8150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0055.png
+8200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0056.png
+8250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0057.png
+8300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0058.png
+8350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0059.png
+8400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0060.png
+8450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0061.png
+8500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0062.png
+8550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0063.png
+8600 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0064.png
+8650 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0065.png
+8700 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0066.png
+8750 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0067.png
+8800 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0068.png
+8850 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0069.png
+8900 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0070.png
+8950 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0071.png
+9000 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0072.png
+9050 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0073.png
+9100 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0074.png
+9150 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0075.png
+9200 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0076.png
+9250 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0077.png
+9300 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0078.png
+9350 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0079.png
+9400 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0080.png
+9450 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0081.png
+9500 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0082.png
+9550 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/boss/0083.png
+9584 reached untildl 0B72 after 4184 frames
+9584 mark level-end
+
+9609 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/10-summary.png
+9809 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/11-summary-press-fire.png
+9810 watch 009A 06 -> 01
+9813 reached until 009A 01 after 0 frames
+9813 mark menu-after-level
+
+9913 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/12-menu-after-level.png
+9913 coldstart
+9913 mark coldstart
+
+9919 watch 009A 01 -> 00
+10412 watch 009A 00 -> 01
+10412 reached until 009A 01 after 399 frames
+10412 mark menu-after-coldstart
+
+10791 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/13-best-after-power-cycle.png
+10792 watch 009A 01 -> 06
+10795 reached until 009A 06 after 0 frames
+11095 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/14-before-reset.png
+11096 reset
+11101 watch 009A 06 -> 00
+11121 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/15-reset-25.png
+11221 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/16-reset-125.png
+11421 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/17-reset-325.png
+11591 watch 009A 00 -> 01
+11591 reached until 009A 01 after 170 frames
+11591 mark menu-after-reset
+
+11691 shot /Users/marcinkrzetowski/Projects/setech-arcade/spike/results/reference/altirra-basic-off/18-menu-after-reset.png
+11691 done

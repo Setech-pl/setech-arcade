@@ -1,0 +1,106 @@
+{
+  "emulator": "atari800 7.2.1 (libatari800, spike/harness/vs65-harness.c)",
+  "machine": "800XL 64 KB, PAL",
+  "atr": {
+    "release": "v0.2.2",
+    "sha256": "19b82947a3b280e05040d8200d96de81e2ae79b504e6d7f2c010579a4604c4d4"
+  },
+  "runs": [
+    {
+      "id": "altirra-basic-off",
+      "os": "altirra",
+      "basic": "off",
+      "exit": 0,
+      "hostMs": 898,
+      "marks": {
+        "menu": 499,
+        "gameplay": 1357,
+        "boss-entry": 4688,
+        "boss-band-live": 4893,
+        "level-end": 9584,
+        "menu-after-level": 9813,
+        "coldstart": 9913,
+        "menu-after-coldstart": 10412,
+        "menu-after-reset": 11591
+      },
+      "framesToMenu": 499,
+      "changedSectors": [
+        599
+      ],
+      "sector599": "5652019400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002003260000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "timeout": null
+    },
+    {
+      "id": "altirra-basic-on",
+      "os": "altirra",
+      "basic": "on",
+      "exit": 0,
+      "hostMs": 847,
+      "marks": {
+        "menu": 496,
+        "gameplay": 1354,
+        "boss-entry": 4598,
+        "boss-band-live": 4803,
+        "level-end": 9208,
+        "menu-after-level": 9437,
+        "coldstart": 9537,
+        "menu-after-coldstart": 10033,
+        "menu-after-reset": 11212
+      },
+      "framesToMenu": 496,
+      "changedSectors": [
+        599
+      ],
+      "sector599": "565201bf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002002895000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "timeout": null
+    },
+    {
+      "id": "xl-basic-off",
+      "os": "xl",
+      "basic": "off",
+      "exit": 0,
+      "hostMs": 943,
+      "marks": {
+        "menu": 552,
+        "gameplay": 1410,
+        "boss-entry": 4715,
+        "boss-band-live": 4920,
+        "level-end": 9352,
+        "menu-after-level": 9581,
+        "coldstart": 9681,
+        "menu-after-coldstart": 10233,
+        "menu-after-reset": 11459
+      },
+      "framesToMenu": 552,
+      "changedSectors": [
+        599
+      ],
+      "sector599": "565201a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002003275000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "timeout": null
+    },
+    {
+      "id": "xl-basic-on",
+      "os": "xl",
+      "basic": "on",
+      "exit": 0,
+      "hostMs": 981,
+      "marks": {
+        "menu": 543,
+        "gameplay": 1401,
+        "boss-entry": 4528,
+        "boss-band-live": 4733,
+        "level-end": 9576,
+        "menu-after-level": 9805,
+        "coldstart": 9905,
+        "menu-after-coldstart": 10448,
+        "menu-after-reset": 11674
+      },
+      "framesToMenu": 543,
+      "changedSectors": [
+        599
+      ],
+      "sector599": "5652018a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002003355000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "timeout": null
+    }
+  ]
+}
