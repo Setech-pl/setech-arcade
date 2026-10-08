@@ -2,8 +2,12 @@
   "name": "setech-arcade",
   "private": true,
   "type": "module",
-  "description": "Setech Game Studio's Atari 8-bit games in the browser (spike: emulator evaluation).",
+  "description": "Setech Game Studio's Atari 8-bit games in the browser.",
   "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium --project=build",
     "spike:harness": "bash spike/scripts/build-native-harness.sh",
     "spike:reference": "node spike/scripts/reference-run.mjs"
   },
@@ -11,5 +15,9 @@
     "@playwright/test": "^1.64.0",
     "pixelmatch": "^8.0.0",
     "pngjs": "^7.0.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
   }
 }

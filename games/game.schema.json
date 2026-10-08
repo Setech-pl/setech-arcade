@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A game on the Setech Arcade",
+  "type": "object",
+  "required": ["id", "title", "tagline", "description", "studio", "year", "status", "screenshots", "disk", "machine", "saves", "controls", "links", "licence", "tests"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "URL slug; also the file name games/<id>.json" },
+    "title": { "type": "string" },
+    "tagline": { "type": "string", "maxLength": 140, "description": "One line for the game card" },
+    "description": { "type": "string", "description": "A short paragraph for the play page" },
+    "studio": { "type": "string" },
+    "year": { "type": "integer" },
+    "status": { "type": "string" },
+    "screenshots": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "required": ["src", "alt"], "properties": { "src": { "type": "string", "description": "Path under games/" }, "alt": { "type": "string" } } }
+    },
+    "disk": {
+      "type": "object", "required": ["repo", "tag", "asset", "sha256"],
+      "description": "The ATR, pinned to one GitHub release. Never 'latest': the game changes on the site only when this changes.",
+      "properties": {
+        "repo": { "type": "string", "pattern": "^[^/\\s]+/[^/\\s]+$" },
+        "tag": { "type": "string" },
+        "asset": { "type": "string", "pattern": "\\.atr$" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "machine": {
+      "type": "object", "required": ["model", "video", "basic"],
+      "properties": { "model": { "enum": ["800xl"] }, "video": { "enum": ["pal"] }, "basic": { "type": "boolean" } }
+    },
+    "saves": { "enum": ["disk", "none"], "description": "disk: the game writes to its own disk; the site keeps that disk per ATR hash" },
+    "controls": {
+      "type": "array",
+      "items": { "type": "object", "required": ["action", "atari"], "properties": { "action": { "type": "string" }, "atari": { "enum": ["Joystick", "Fire", "Space", "Return", "Escape", "START", "SELECT", "OPTION"] } } }
+    },
+    "links": {
+      "type": "object", "required": ["repo", "releases"],
+      "properties": { "repo": { "type": "string" }, "releases": { "type": "string" }, "howToPlay": { "type": "string" } }
+    },
+    "licence": {
+      "type": "object", "required": ["summary", "url", "credit"],
+      "properties": { "summary": { "type": "string" }, "url": { "type": "string" }, "credit": { "type": "string" } }
+    },
+    "tests": {
+      "type": "object", "required": ["menuFrame"],
+      "properties": { "menuFrame": { "type": "integer", "minimum": 1, "description": "Frames after power-on at which the menu is on screen; the smoke test compares this frame with tests/reference/<id>-menu.png" } }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Builds prototype P1: atari800 7.2.1 (libatari800 target) compiled to
-# WebAssembly with Emscripten, plus spike/harness/wasm-glue.c.
+# WebAssembly with Emscripten, plus emulator/atari800/wasm-glue.c.
 # Output: spike/prototypes/atari800-wasm/atari800.{js,wasm} (GPL-2.0-or-later;
 # the corresponding source is the atari800 7.2.1 release tarball + this repo).
 set -euo pipefail
@@ -28,7 +28,7 @@ if [ ! -f "$src/src/libatari800.a" ]; then
 fi
 out="$here/prototypes/atari800-wasm"
 mkdir -p "$out"
-emcc -O3 -I"$src/src" "$here/harness/wasm-glue.c" "$src/src/libatari800.a" \
+emcc -O3 -I"$src/src" "$here/../emulator/atari800/wasm-glue.c" "$src/src/libatari800.a" \
   -o "$out/atari800.js" \
   -s MODULARIZE=1 -s EXPORT_ES6=1 -s EXPORT_NAME=createAtari800 -s ENVIRONMENT=web \
   -s ALLOW_MEMORY_GROWTH=1 -s FORCE_FILESYSTEM=1 \

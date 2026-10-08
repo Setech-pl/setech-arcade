@@ -1,0 +1,39 @@
+{
+  "$schema": "./game.schema.json",
+  "id": "void-strike-65",
+  "title": "Void Strike 65",
+  "tagline": "A vertical space shooter: one fighter, a capital-ship corridor and a boss at the end of the level.",
+  "description": "You fly one fighter through contested space, alone, against everything that is already there: open space, then the corridor between two capital ships fighting each other, then the boss. Written in 6502 assembly and C for a PAL Atari 65XE/800XL. Unfinished: level 1 and its boss are playable.",
+  "studio": "Setech Game Studio",
+  "year": 2026,
+  "status": "Pre-release v0.2.2",
+  "screenshots": [
+    { "src": "media/void-strike-65/capital-corridor.png", "alt": "The fighter between the allied and the hostile capital ship" },
+    { "src": "media/void-strike-65/boss.png", "alt": "The boss: a wide armoured band firing a purple laser at the fighter" },
+    { "src": "media/void-strike-65/menu.png", "alt": "The main menu: START GAME, OPTIONS, TOP SCORES, EXIT" }
+  ],
+  "disk": {
+    "repo": "Setech-pl/void-strike-65",
+    "tag": "v0.2.2",
+    "asset": "void-strike-65.atr",
+    "sha256": "19b82947a3b280e05040d8200d96de81e2ae79b504e6d7f2c010579a4604c4d4"
+  },
+  "machine": { "model": "800xl", "video": "pal", "basic": false },
+  "saves": "disk",
+  "controls": [
+    { "action": "Move", "atari": "Joystick" },
+    { "action": "Shoot; select in menus", "atari": "Fire" },
+    { "action": "Pause", "atari": "Space" }
+  ],
+  "links": {
+    "repo": "https://github.com/Setech-pl/void-strike-65",
+    "releases": "https://github.com/Setech-pl/void-strike-65/releases",
+    "howToPlay": "https://github.com/Setech-pl/void-strike-65/blob/main/docs/how-to-play.md"
+  },
+  "licence": {
+    "summary": "The disk image as a whole: CC BY-NC-SA 4.0; the game's code: MIT. \"Void Strike 65\" and the Setech Game Studio name and logo: all rights reserved.",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "credit": "(C) 2026 Setech Game Studio, Marcin Krzetowski"
+  },
+  "tests": { "menuFrame": 600 }
+}

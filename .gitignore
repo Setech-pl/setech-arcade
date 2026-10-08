@@ -17,3 +17,7 @@ spike/results/reference/xl-basic-off/boss/
 spike/results/reference/xl-basic-on/boss/
 spike/results/p3-sfotty-pie/node/boss/
 spike/results/p3-sfotty-pie/node-own-palette/boss/
+# Phase B
+/.cache/
+/build/
+/dist/

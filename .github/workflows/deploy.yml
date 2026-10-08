@@ -1,0 +1,111 @@
+# Builds the site, tests it in Chromium, Firefox and WebKit, and deploys it
+# to GitHub Pages (https://setech-pl.github.io/setech-arcade/).
+#
+# - atari800 7.2.1 is compiled to WebAssembly from its pinned, hash-checked
+#   release tarball (emulator/atari800/build.sh), with a pinned Emscripten.
+# - Every game disk is downloaded from the release pinned in games/<id>.json
+#   and checked against its SHA-256; a mismatch fails the build.
+# - Chromium and Firefox are required; a WebKit failure is reported in the
+#   run's summary but does not block the deploy (owner decision, docs/known-issues.md).
+# Pull requests build and test; only main deploys.
+name: Build, test, deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Cache the emulator toolchain, its build and the game disks
+        uses: actions/cache@v6
+        with:
+          path: |
+            .cache
+            build/emulator
+          key: emulator-${{ runner.os }}-${{ hashFiles('emulator/atari800/build.sh', 'emulator/atari800/wasm-glue.c') }}-${{ hashFiles('games/*.json') }}
+          restore-keys: |
+            emulator-${{ runner.os }}-${{ hashFiles('emulator/atari800/build.sh', 'emulator/atari800/wasm-glue.c') }}-
+            emulator-${{ runner.os }}-
+
+      - run: npm ci
+
+      - name: Build (emulator, pinned disks, site)
+        run: npm run build
+
+      - name: Install the browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+
+      - name: Test - build checks, Chromium, Firefox (required)
+        run: npx playwright test --project=build --project=chromium --project=firefox
+        env:
+          CI: "1"
+
+      - name: Test - WebKit (reported, does not block the deploy)
+        id: webkit
+        continue-on-error: true
+        run: npx playwright test --project=webkit
+        env:
+          CI: "1"
+
+      - name: Report a WebKit failure
+        if: steps.webkit.outcome == 'failure'
+        run: |
+          echo "::warning title=WebKit tests failed::See the Playwright report artifact; record the issue in docs/known-issues.md and the Safari note."
+          echo "### WebKit tests failed (not blocking)" >> "$GITHUB_STEP_SUMMARY"
+          echo "See the playwright-report artifact. Owner decision: Chrome and Firefox are required; Safari problems get a note on the play page." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Keep the test report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Site size
+        run: |
+          echo "### Site: $(du -sh dist | cut -f1), $(find dist -type f | wc -l) files" >> "$GITHUB_STEP_SUMMARY"
+          cat dist/build-info.json >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/configure-pages@v6
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+
+      - uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
