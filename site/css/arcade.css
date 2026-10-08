@@ -80,6 +80,7 @@ h3 { font-size: 16px; }
 .button.primary:hover, button.primary:hover { background: #f6c460; }
 button:disabled { opacity: 0.55; cursor: progress; }
 button.danger { color: var(--danger); }
+button.quiet { min-height: 36px; padding: 6px 12px; font-size: 13px; color: var(--muted); background: transparent; }
 
 /* ---- index: game cards ---- */
 .games { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 24px; margin-top: 28px; }

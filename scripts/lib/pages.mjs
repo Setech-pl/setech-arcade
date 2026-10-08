@@ -110,6 +110,7 @@ export function playPage(game, diskPath) {
 <div class="toolbar">
   <button id="fullscreen" type="button">Fullscreen</button>
   <button id="reset-score" class="danger" type="button">Reset best score</button>
+  <button id="sound-retry" class="quiet" type="button" hidden>Sound unavailable — click to retry</button>
 </div>
 <p id="status" class="status-line" role="status" aria-live="polite"></p>
 <p id="save-status" class="status-line" aria-live="polite"></p>

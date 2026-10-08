@@ -23,6 +23,7 @@ const ui = {
   saveStatus: $("save-status"),
   fullscreen: $("fullscreen"),
   resetScore: $("reset-score"),
+  soundRetry: $("sound-retry"),
   fire: $("touch-fire"),
 };
 
@@ -173,18 +174,51 @@ for (const ev of ["pointerup", "pointercancel", "lostpointercapture"]) ui.fire.a
 for (const el of document.querySelectorAll(".touch button")) el.addEventListener("contextmenu", (e) => e.preventDefault());
 
 // ---- audio ------------------------------------------------------------------
+// Sound never holds up the game. Without an audio device Firefox's resume()
+// never settles (docs/fixes/firefox-keyboard-start.md), so the game starts
+// first, sound gets AUDIO_START_MS to come up, and if it does not the game
+// runs silently and the page offers to retry.
+const AUDIO_START_MS = 3000;
 let audio;
 let audioNode;
+let audioSetup = null;
 const audioStats = { underruns: 0, dropped: 0, bufferedMs: 0 };
-async function startAudio() {
+function setUpAudio() {
   // The context runs at the emulator's rate (44.1 kHz), so samples go out
   // unconverted; every current browser accepts a sampleRate here.
-  audio = new AudioContext({ sampleRate: core.audioRate, latencyHint: "interactive" });
-  await audio.audioWorklet.addModule(new URL("./audio-worklet.js", import.meta.url));
-  audioNode = new AudioWorkletNode(audio, "arcade-fifo", { outputChannelCount: [2] });
-  audioNode.port.onmessage = (e) => Object.assign(audioStats, e.data);
-  audioNode.connect(audio.destination);
+  audioSetup ??= (async () => {
+    const ctx = new AudioContext({ sampleRate: core.audioRate, latencyHint: "interactive" });
+    try {
+      await ctx.audioWorklet.addModule(new URL("./audio-worklet.js", import.meta.url));
+      const node = new AudioWorkletNode(ctx, "arcade-fifo", { outputChannelCount: [2] });
+      node.port.onmessage = (e) => Object.assign(audioStats, e.data);
+      node.connect(ctx.destination);
+      audio = ctx;
+      audioNode = node;
+    } catch (e) {
+      ctx.close().catch(() => {});
+      throw e;
+    }
+    // a resume() that settles late, or a device that comes back
+    audio.addEventListener("statechange", () => { if (audio.state === "running") soundUnavailable(false); });
+  })().catch((e) => { audioSetup = null; throw e; });
+  return audioSetup;
+}
+async function startAudio() {
+  await setUpAudio();
   if (audio.state !== "running") await audio.resume();
+}
+function soundUnavailable(yes) {
+  ui.soundRetry.hidden = !yes;
+}
+async function bringUpSound() {
+  let timer;
+  const late = new Promise((_, reject) => { timer = setTimeout(() => reject(new Error("sound timed out")), AUDIO_START_MS); });
+  try {
+    await Promise.race([startAudio(), late]);
+  } catch { /* no sound: the game runs without it */ }
+  clearTimeout(timer);
+  soundUnavailable(audio?.state !== "running");
 }
 
 // ---- stepping and saving ----------------------------------------------------
@@ -203,7 +237,7 @@ function step(input) {
   frame += 1;
   const samples = core.takeAudio();
   if (arcade.audioTap) arcade.audioTap.push(samples.slice());
-  if (audioNode && samples.length) audioNode.port.postMessage(samples, [samples.buffer]);
+  if (audio?.state === "running" && samples.length) audioNode.port.postMessage(samples, [samples.buffer]);
   const writes = core.diskWrites();
   if (writes !== lastWrites) {
     lastWrites = writes;
@@ -261,16 +295,16 @@ async function start() {
   ui.start.hidden = true;
   ui.stage.focus();
   if (MANUAL) return;
-  try {
-    await startAudio();
-  } catch {
-    say("Sound could not start in this browser; the game runs without it.");
-  }
   running = true;
   requestAnimationFrame(tick);
   say(`Playing. ${saved ? "Your saved disk was restored." : ""}`.trim());
+  await bringUpSound(); // inside the click: browsers allow sound only after a user gesture
 }
 ui.start.addEventListener("click", start);
+ui.soundRetry.addEventListener("click", () => {
+  bringUpSound();
+  ui.stage.focus();
+});
 ui.fullscreen.addEventListener("click", async () => {
   if (document.fullscreenElement) await document.exitFullscreen();
   else await ui.player.requestFullscreen?.().catch(() => {});

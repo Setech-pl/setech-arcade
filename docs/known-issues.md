@@ -24,6 +24,11 @@ with no audio underruns, the same as Chromium 156 and Firefox 157
   keyboard test does the same in WebKit.
 - **Sound starts on the click** of "Start game" (browsers block audio before
   a user gesture). Nothing plays before it.
+- **No audio device, no sound.** If sound cannot start within 3 seconds of
+  the click, for example with no output device (Firefox then waits forever,
+  docs/fixes/firefox-keyboard-start.md), the game runs silently. A small
+  "Sound unavailable — click to retry" button then appears below the
+  screen. Before this fix, the game did not start at all in that case.
 - **A 60 Hz display shows one PAL frame in five twice** (the game runs at its
   real 49.86 Hz). This slight judder in smooth scrolling is inherent; 100 Hz
   and variable-refresh displays are smooth.
