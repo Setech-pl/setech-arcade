@@ -33,7 +33,7 @@ skip all of step 3, which is why they pass in the same Firefox run.
 
 When Firefox has no audio output device, `AudioContext.resume()` stays
 pending forever. It neither resolves nor rejects, so `start()` waits at
-step 3.4 for good. The CI runner (ubuntu-latest, headless, no sound server)
+step 3.4 for good. The CI runner (ubuntu-24.04, headless, no sound server)
 has no audio device. Chromium resolves `resume()` there anyway.
 
 Evidence:

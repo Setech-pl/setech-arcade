@@ -64,6 +64,23 @@ Write `games/<id>.json` (pin the release and its SHA-256), add screenshots
 under `games/media/<id>/`, build, create the menu reference image, test.
 Step by step: [docs/adding-a-game.md](docs/adding-a-game.md).
 
+## Maintenance
+
+### The CI runner
+
+Both jobs of the workflow run on **`ubuntu-24.04`**, a fixed runner image,
+not `ubuntu-latest`: GitHub moves `ubuntu-latest` to a new Ubuntu on its own
+schedule (to Ubuntu 26 from 2026-10-19,
+[actions/runner-images#14748](https://github.com/actions/runner-images/issues/14748)),
+and a silent OS change could break the emulator build, the Playwright
+browsers or the tests, and with them the next deploy.
+
+To move to a newer runner later: change the `runs-on:` label of every job
+in `.github/workflows/deploy.yml` on a branch, open a pull request (pull
+requests build and test but do not deploy), watch the run, and merge only
+when it is green. GitHub announces the end of support for a runner image
+in the run's annotations.
+
 ## Repository layout
 
 | Path | What |
