@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
+    "pin": "node scripts/pin.mjs",
     "test": "playwright test",
     "test:chromium": "playwright test --project=chromium --project=build",
     "spike:harness": "bash spike/scripts/build-native-harness.sh",

@@ -53,7 +53,8 @@ The tests run against `dist/`, served under `/setech-arcade/` as on Pages:
   `tests/reference/<id>-menu.png` exactly (the emulator is deterministic);
 - the best score survives a reload, and "Reset best score" clears it;
 - the play page works with the keyboard only;
-- a wrong disk hash, or a disk pinned to "latest", fails the build.
+- a wrong disk hash, or a disk pinned to "latest", fails the build;
+- `npm run pin` refuses "latest", a missing release or asset and a wrong hash.
 
 `node scripts/check-realtime.mjs` measures real-time pacing and audio in the
 three browsers; `node scripts/screenshots.mjs` refreshes `docs/screenshots/`.
@@ -65,6 +66,28 @@ under `games/media/<id>/`, build, create the menu reference image, test.
 Step by step: [docs/adding-a-game.md](docs/adding-a-game.md).
 
 ## Maintenance
+
+### Pinning a new game release
+
+One command moves a game to another release of its repo:
+
+```bash
+npm run pin -- <game-id> <tag>                       # e.g. void-strike-65 v0.2.3
+npm run pin -- <game-id> <tag> --expect-sha 75cf839c # also check the hash's start
+npm run pin -- <game-id> <tag> --asset other.atr     # another asset of that release
+```
+
+It finds the release in the repo named in `games/<id>.json` (it refuses
+"latest", a release that does not exist and a release without the asset),
+downloads the asset and checks its SHA-256 against GitHub's digest, writes
+`disk.tag`, `disk.asset`, `disk.sha256` (and the version in `status`) into
+`games/<id>.json`, rebuilds, rewrites `tests/reference/<id>-menu.png`
+through the menu test itself, and puts the old and new images and their
+difference in `test-results/pin/<id>/` (`previous.png`, `current.png`,
+`diff.png`) for review. Then it runs the tests as the workflow does. It
+does not commit: look at the difference, then commit the data file and the
+reference. `GITHUB_TOKEN` or `GH_TOKEN`, if set, raises the GitHub API's
+rate limit.
 
 ### The CI runner
 
@@ -87,7 +110,7 @@ in the run's annotations.
 |---|---|
 | `games/` | one JSON per game, `game.schema.json`, screenshots in `media/` |
 | `site/` | the static site: stylesheet, the player, the emulator adapter, the audio worklet |
-| `scripts/` | `build.mjs`, `serve.mjs`, page templates and game loading in `lib/` |
+| `scripts/` | `build.mjs`, `serve.mjs`, `pin.mjs`, page templates and game loading in `lib/` |
 | `emulator/atari800/` | the WebAssembly build script, the C glue, atari800's `COPYING` (GPL) |
 | `tests/` | Playwright tests, reference images, per-game test knowledge in `games/` |
 | `docs/` | the emulator evaluation, adding a game, known issues, the upstream jsA8E report, screenshots |

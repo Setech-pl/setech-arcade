@@ -92,7 +92,18 @@ checks it, tests and deploys.
 
 ## Updating a game
 
-Change `disk.tag` and `disk.sha256` (and `status`), rebuild, re-check the
-menu frame (`npm test`; if the menu changed, write a new reference and look
-at it). A new disk has a new hash, so players start with a fresh disk: the
+```bash
+npm run pin -- <id> <tag>          # e.g. npm run pin -- void-strike-65 v0.2.3
+```
+
+`scripts/pin.mjs` downloads the release asset, checks it, writes
+`disk.tag`, `disk.asset`, `disk.sha256` (and the version in `status`),
+rebuilds, rewrites the menu reference through the menu test, shows the old
+and new reference and their difference in `test-results/pin/<id>/`, and
+runs the tests. Look at the difference before committing
+`games/<id>.json` and `tests/reference/<id>-menu.png` (README,
+"Maintenance"). If the game's RAM layout moved, `tests/games/<id>.mjs`
+needs the new addresses.
+
+A new disk has a new hash, so players start with a fresh disk: the
 best scores saved for the old version are not carried over.

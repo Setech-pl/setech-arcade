@@ -18,9 +18,9 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
   projects: [
-    { name: "build", testMatch: /build\.spec\.mjs/ },
-    { name: "chromium", testIgnore: /build\.spec\.mjs/, use: { ...devices["Desktop Chrome"] } },
-    { name: "firefox", testIgnore: /build\.spec\.mjs/, use: { ...devices["Desktop Firefox"] } },
-    { name: "webkit", testIgnore: /build\.spec\.mjs/, use: { ...devices["Desktop Safari"] } },
+    { name: "build", testMatch: /(build|pin)\.spec\.mjs/ },
+    { name: "chromium", testIgnore: /(build|pin)\.spec\.mjs/, use: { ...devices["Desktop Chrome"] } },
+    { name: "firefox", testIgnore: /(build|pin)\.spec\.mjs/, use: { ...devices["Desktop Firefox"] } },
+    { name: "webkit", testIgnore: /(build|pin)\.spec\.mjs/, use: { ...devices["Desktop Safari"] } },
   ],
 });
