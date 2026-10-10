@@ -59,7 +59,7 @@ page shows it.
 (C) 2026 Setech Game Studio, Marcin Krzetowski. Source and releases:
 <https://github.com/Setech-pl/void-strike-65>.
 
-- The disk image (`disks/void-strike-65-*.atr`, release v0.2.2, unmodified)
+- The disk image (`disks/void-strike-65-*.atr`, release v0.2.3, unmodified)
   as a whole, and its screenshots (`games/media/void-strike-65/`): Creative
   Commons Attribution-NonCommercial-ShareAlike 4.0 International,
   <https://creativecommons.org/licenses/by-nc-sa/4.0/>.

@@ -9,7 +9,7 @@ this site, on an emulated PAL Atari 800XL with 64 KB and the open AltirraOS.
 Nothing is installed and nothing leaves the browser; a game that saves (Void
 Strike 65's best scores) keeps its written disk in the browser's IndexedDB.
 
-Games today: **Void Strike 65** (pinned to release v0.2.2).
+Games today: **Void Strike 65** (pinned to release v0.2.3).
 
 ## How it works
 
