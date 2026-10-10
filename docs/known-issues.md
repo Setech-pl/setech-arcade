@@ -33,6 +33,21 @@ with no audio underruns, the same as Chromium 156 and Firefox 157
   real 49.86 Hz). This slight judder in smooth scrolling is inherent; 100 Hz
   and variable-refresh displays are smooth.
 
+## Disk loading (SIO patch on)
+
+The site's emulator loads disks with atari800's **SIO patch on**, its
+default: `vs_init` in `emulator/atari800/wasm-glue.c` passes no `-nopatch`,
+and `site/js/atari800-core.js` gives it an empty config file. The patch
+answers the OS disk routine directly instead of emulating the serial
+transfer, so the game is in its menu within 12 seconds of emulated time
+(the menu test's frame 600) instead of the ~30 seconds a real Atari takes
+at standard SIO speed.
+
+The pinned Void Strike 65 **v0.2.3** also boots and plays on real hardware
+(a PAL 65XE/800XL from an SIO2SD or a disk drive), with its full sound.
+Every earlier ATR, up to v0.2.2, stopped on a red screen on a real Atari
+and loaded only in emulators with the SIO patch on.
+
 ## Not verifiable in automated tests
 
 Headless browsers cannot judge these; they belong to the owner's smoke test:
