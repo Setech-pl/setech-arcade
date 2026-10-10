@@ -83,7 +83,7 @@ downloads the asset and checks its SHA-256 against GitHub's digest, writes
 `disk.tag`, `disk.asset`, `disk.sha256` (and the version in `status`) into
 `games/<id>.json`, rebuilds, rewrites `tests/reference/<id>-menu.png`
 through the menu test itself, and puts the old and new images and their
-difference in `test-results/pin/<id>/` (`previous.png`, `current.png`,
+difference in `build/pin/<id>/` (`previous.png`, `current.png`,
 `diff.png`) for review. Then it runs the tests as the workflow does. It
 does not commit: look at the difference, then commit the data file and the
 reference. `GITHUB_TOKEN` or `GH_TOKEN`, if set, raises the GitHub API's

@@ -5,7 +5,7 @@
 //      "status", if it names the old tag),
 //   3. rebuilds, rewrites tests/reference/<id>-menu.png through the menu test
 //      (UPDATE_REFERENCE=1, the same code that checks it) and shows how it
-//      changed: test-results/pin/<id>/{previous,current,diff}.png,
+//      changed: build/pin/<id>/{previous,current,diff}.png,
 //   4. runs the tests (build, Chromium, Firefox required; WebKit reported).
 //
 //   npm run pin -- <game-id> <tag> [--asset <file.atr>] [--expect-sha <prefix>]
@@ -123,7 +123,7 @@ async function main() {
   if (!run("menu reference (UPDATE_REFERENCE=1, the menu test in Chromium)", npx, ["playwright", "test", "menu", "--project=chromium", "--grep", `${id}: boots`], { UPDATE_REFERENCE: "1" })) {
     refuse("the menu test could not write the reference image");
   }
-  const review = path.join(root, "test-results", "pin", id);
+  const review = path.join(root, "build", "pin", id); // not test-results/: step 4 empties it
   fs.rmSync(review, { recursive: true, force: true });
   fs.mkdirSync(review, { recursive: true });
   fs.copyFileSync(reference, path.join(review, "current.png"));

@@ -99,7 +99,7 @@ npm run pin -- <id> <tag>          # e.g. npm run pin -- void-strike-65 v0.2.3
 `scripts/pin.mjs` downloads the release asset, checks it, writes
 `disk.tag`, `disk.asset`, `disk.sha256` (and the version in `status`),
 rebuilds, rewrites the menu reference through the menu test, shows the old
-and new reference and their difference in `test-results/pin/<id>/`, and
+and new reference and their difference in `build/pin/<id>/`, and
 runs the tests. Look at the difference before committing
 `games/<id>.json` and `tests/reference/<id>-menu.png` (README,
 "Maintenance"). If the game's RAM layout moved, `tests/games/<id>.mjs`
