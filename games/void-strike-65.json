@@ -6,7 +6,7 @@
   "description": "You fly one fighter through contested space, alone, against everything that is already there: open space, then the corridor between two capital ships fighting each other, then the boss. Written in 6502 assembly and C for a PAL Atari 65XE/800XL. Unfinished: level 1 and its boss are playable.",
   "studio": "Setech Game Studio",
   "year": 2026,
-  "status": "Pre-release v0.2.3",
+  "status": "Pre-release v0.3.0",
   "screenshots": [
     { "src": "media/void-strike-65/capital-corridor.png", "alt": "The fighter between the allied and the hostile capital ship" },
     { "src": "media/void-strike-65/boss.png", "alt": "The boss: a wide armoured band firing a purple laser at the fighter" },
@@ -14,9 +14,9 @@
   ],
   "disk": {
     "repo": "Setech-pl/void-strike-65",
-    "tag": "v0.2.3",
+    "tag": "v0.3.0",
     "asset": "void-strike-65.atr",
-    "sha256": "75cf839c01c9baa5b5c74ebe7f5de21072e05c941b7abeef176045148c6ad327"
+    "sha256": "c977efe068d33356096b0d4c36ecba69b775d5507fe6a81eb8336b0200b40b87"
   },
   "machine": { "model": "800xl", "video": "pal", "basic": false },
   "saves": "disk",

@@ -1,7 +1,8 @@
-// Test knowledge for Void Strike 65 v0.2.3 - RAM addresses checked against
-// the running game in the emulator spike (docs/spike-emulator.md §1, v0.2.2)
-// and re-checked for v0.2.3 (only the summary's display list moved, $0B72 ->
-// $0B58). They drive the tests only; the site needs none of them.
+// Test knowledge for Void Strike 65 v0.3.0 - RAM addresses checked against
+// the running game in the emulator spike (docs/spike-emulator.md §1, v0.2.2),
+// re-checked for v0.2.3 (only the summary's display list moved, $0B72 ->
+// $0B58) and for v0.3.0 (unchanged). They drive the tests only; the site
+// needs none of them.
 export const GAME_STATE = 0x9a; // 0 loader, 1 main menu, 6 gameplay
 export const SAVE_SECTOR = 599; // the best-score record ("VR" ...)
 

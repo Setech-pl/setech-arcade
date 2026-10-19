@@ -93,7 +93,7 @@ checks it, tests and deploys.
 ## Updating a game
 
 ```bash
-npm run pin -- <id> <tag>          # e.g. npm run pin -- void-strike-65 v0.2.3
+npm run pin -- <id> <tag>          # e.g. npm run pin -- void-strike-65 v0.3.0
 ```
 
 `scripts/pin.mjs` downloads the release asset, checks it, writes

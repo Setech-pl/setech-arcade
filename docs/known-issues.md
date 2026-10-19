@@ -43,10 +43,11 @@ transfer, so the game is in its menu within 12 seconds of emulated time
 (the menu test's frame 600) instead of the ~30 seconds a real Atari takes
 at standard SIO speed.
 
-The pinned Void Strike 65 **v0.2.3** also boots and plays on real hardware
-(a PAL 65XE/800XL from an SIO2SD or a disk drive), with its full sound.
-Every earlier ATR, up to v0.2.2, stopped on a red screen on a real Atari
-and loaded only in emulators with the SIO patch on.
+Void Strike 65 **v0.2.3** (pinned before v0.3.0) also boots and plays on
+real hardware (a PAL 65XE/800XL from an SIO2SD or a disk drive), with its
+full sound. Every earlier ATR, up to v0.2.2, stopped on a red screen on a
+real Atari and loaded only in emulators with the SIO patch on. The pinned
+**v0.3.0** has not yet been confirmed on real hardware here.
 
 ## Not verifiable in automated tests
 

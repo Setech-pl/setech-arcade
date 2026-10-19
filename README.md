@@ -9,7 +9,7 @@ this site, on an emulated PAL Atari 800XL with 64 KB and the open AltirraOS.
 Nothing is installed and nothing leaves the browser; a game that saves (Void
 Strike 65's best scores) keeps its written disk in the browser's IndexedDB.
 
-Games today: **Void Strike 65** (pinned to release v0.2.3).
+Games today: **Void Strike 65** (pinned to release v0.3.0).
 
 ## How it works
 
@@ -72,7 +72,7 @@ Step by step: [docs/adding-a-game.md](docs/adding-a-game.md).
 One command moves a game to another release of its repo:
 
 ```bash
-npm run pin -- <game-id> <tag>                       # e.g. void-strike-65 v0.2.3
+npm run pin -- <game-id> <tag>                       # e.g. void-strike-65 v0.3.0
 npm run pin -- <game-id> <tag> --expect-sha 75cf839c # also check the hash's start
 npm run pin -- <game-id> <tag> --asset other.atr     # another asset of that release
 ```
