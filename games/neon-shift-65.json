@@ -5,7 +5,7 @@
   "description": "Push every crate onto a dock across Energy, Hydroponic, Data Hub and Reactor. All 60 starting layouts have verified solutions. Undo up to 256 steps, restart a level, save from pause and Continue next time. Physical Atari/SIO2SD testing and owner listening remain unconfirmed.",
   "studio": "Setech Game Studio",
   "year": 2026,
-  "status": "Release v1.0.0",
+  "status": "Release v1.0.1",
   "screenshots": [
     {
       "src": "media/neon-shift-65/energy.png",
@@ -26,7 +26,7 @@
   ],
   "disk": {
     "repo": "Setech-pl/neon-shift-65",
-    "tag": "v1.0.0",
+    "tag": "v1.0.1",
     "asset": "neon-shift65.atr",
     "sha256": "a22992f1c4350d0e5c72150c6902aefdd2f485c3be5979f9da2a7bc2d32f3407"
   },
@@ -61,7 +61,7 @@
   ],
   "links": {
     "repo": "https://github.com/Setech-pl/neon-shift-65",
-    "releases": "https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.0",
+    "releases": "https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.1",
     "howToPlay": "https://github.com/Setech-pl/neon-shift-65/blob/main/docs/how-to-play.md"
   },
   "licence": {

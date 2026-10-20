@@ -8,7 +8,7 @@ Each game runs from its released disk image (ATR) in
 this site, on an emulated PAL Atari 800XL with 64 KB and the open AltirraOS.
 Nothing is installed and nothing leaves the browser; a game that saves (Void Strike 65's best scores or NEON SHIFT 65's progress) keeps its written disk in the browser's IndexedDB.
 
-Games today: **Void Strike 65** (v0.3.0) and **NEON SHIFT 65** (v1.0.0), each pinned to its released ATR and SHA-256.
+Games today: **Void Strike 65** (v0.3.0) and **NEON SHIFT 65** (v1.0.1), each pinned to its released ATR and SHA-256.
 
 ## How it works
 
@@ -132,7 +132,7 @@ trademark of its owner; this site is not affiliated with Atari.
 ## NEON SHIFT 65
 
 [Play](https://setech-pl.github.io/setech-arcade/play/neon-shift-65/) ·
-[Release v1.0.0](https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.0).
+[Release v1.0.1](https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.1).
 PAL Atari XL/XE, 64 KB, BASIC OFF. Arrows/WASD move, Z/X is FIRE; F3 SELECT
 undoes, F2 OPTION restarts, F4 START pauses. SELECT while paused saves and
 returns to the menu. Continue restores the board and counters, with empty

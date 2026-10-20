@@ -15,7 +15,7 @@ const state = page => page.evaluate(L => {
 test('neon-shift-65: push, undo, restart, save, cold Continue and reset progress', async ({ page }) => {
   const errors=[]; page.on('pageerror',e=>errors.push(e.message));
   await openPlay(page,'neon-shift-65','?manual=1&fresh=1');
-  await expect(page.getByRole('link',{name:'Download ATR',exact:true})).toHaveAttribute('href','https://github.com/Setech-pl/neon-shift-65/releases/download/v1.0.0/neon-shift65.atr');
+  await expect(page.getByRole('link',{name:'Download ATR',exact:true})).toHaveAttribute('href','https://github.com/Setech-pl/neon-shift-65/releases/download/v1.0.1/neon-shift65.atr');
   await page.getByRole('button',{name:/Start game/}).click();
   await script(page,'frames 3000');
   expect((await state(page)).phase).toBe(0);

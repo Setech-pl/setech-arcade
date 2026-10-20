@@ -75,15 +75,15 @@ tests only.
 Atari is a trademark of its owner. This site is not affiliated with or
 endorsed by Atari.
 
-## NEON SHIFT 65 v1.0.0
+## NEON SHIFT 65 v1.0.1
 
 © 2026 Marcin Krzetowski / Setech Game Studio. The game is loaded from the
-normal ATR at https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.0,
+normal ATR at https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.1,
 SHA-256 `a22992f1c4350d0e5c72150c6902aefdd2f485c3be5979f9da2a7bc2d32f3407`.
 Code: MIT License. Creative content, screenshots and complete disk:
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 (CC BY-NC-SA 4.0). Service Current retains CC0; linked cc65 and adapted Void
 Strike components retain their notices. Names and marks reserved.
 Full scope and original component terms:
-https://github.com/Setech-pl/neon-shift-65/blob/v1.0.0/LICENSE-ASSETS and
-https://github.com/Setech-pl/neon-shift-65/blob/v1.0.0/THIRD_PARTY_NOTICES.md.
+https://github.com/Setech-pl/neon-shift-65/blob/v1.0.1/LICENSE-ASSETS and
+https://github.com/Setech-pl/neon-shift-65/blob/v1.0.1/THIRD_PARTY_NOTICES.md.
