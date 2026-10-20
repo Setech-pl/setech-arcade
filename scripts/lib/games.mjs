@@ -26,6 +26,7 @@ export function validateGame(g, file) {
   need(/^[0-9a-f]{64}$/.test(d.sha256 ?? ""), file, "disk.sha256 must be 64 lowercase hex digits");
   need(g.machine.model === "800xl" && g.machine.video === "pal" && typeof g.machine.basic === "boolean", file, 'machine: { model: "800xl", video: "pal", basic: true|false }');
   need(["disk", "none"].includes(g.saves), file, 'saves must be "disk" or "none"');
+  need(g.saveKind === undefined || ["progress", "highscore"].includes(g.saveKind), file, "saveKind: progress or highscore");
   need(Array.isArray(g.controls) && g.controls.every((c) => c.action && c.atari), file, "controls: [{ action, atari }]");
   need(g.links.repo && g.links.releases, file, "links.repo and links.releases are required");
   need(g.licence.summary && g.licence.url && g.licence.credit, file, "licence: { summary, url, credit }");

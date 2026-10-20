@@ -6,10 +6,9 @@ Setech Game Studio's Atari 8-bit games, playable in the browser:
 Each game runs from its released disk image (ATR) in
 [atari800](https://atari800.github.io/) 7.2.1, compiled to WebAssembly for
 this site, on an emulated PAL Atari 800XL with 64 KB and the open AltirraOS.
-Nothing is installed and nothing leaves the browser; a game that saves (Void
-Strike 65's best scores) keeps its written disk in the browser's IndexedDB.
+Nothing is installed and nothing leaves the browser; a game that saves (Void Strike 65's best scores or NEON SHIFT 65's progress) keeps its written disk in the browser's IndexedDB.
 
-Games today: **Void Strike 65** (pinned to release v0.3.0).
+Games today: **Void Strike 65** (v0.3.0) and **NEON SHIFT 65** (v1.0.0), each pinned to its released ATR and SHA-256.
 
 ## How it works
 
@@ -129,3 +128,19 @@ in the run's annotations.
 
 Details: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Atari is a
 trademark of its owner; this site is not affiliated with Atari.
+
+## NEON SHIFT 65
+
+[Play](https://setech-pl.github.io/setech-arcade/play/neon-shift-65/) ·
+[Release v1.0.0](https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.0).
+PAL Atari XL/XE, 64 KB, BASIC OFF. Arrows/WASD move, Z/X is FIRE; F3 SELECT
+undoes, F2 OPTION restarts, F4 START pauses. SELECT while paused saves and
+returns to the menu. Continue restores the board and counters, with empty
+undo history. The written disk is stored in IndexedDB per release hash.
+Clearing site data or Reset saved progress removes it. Touch/gamepad expose
+movement and FIRE; the full console controls require a keyboard.
+
+Code: MIT License. Content and the complete ATR: Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International; Service Current retains
+CC0 and component notices apply. © 2026 Marcin Krzetowski / Setech Game Studio.
+Physical Atari/SIO2SD testing and owner listening remain unconfirmed.

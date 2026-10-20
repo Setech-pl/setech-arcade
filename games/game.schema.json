@@ -30,6 +30,7 @@
       "properties": { "model": { "enum": ["800xl"] }, "video": { "enum": ["pal"] }, "basic": { "type": "boolean" } }
     },
     "saves": { "enum": ["disk", "none"], "description": "disk: the game writes to its own disk; the site keeps that disk per ATR hash" },
+    "saveKind": { "enum": ["progress", "highscore"], "description": "Optional disk-save wording; storage stays keyed by ATR hash" },
     "controls": {
       "type": "array",
       "items": { "type": "object", "required": ["action", "atari"], "properties": { "action": { "type": "string" }, "atari": { "enum": ["Joystick", "Fire", "Space", "Return", "Escape", "START", "SELECT", "OPTION"] } } }

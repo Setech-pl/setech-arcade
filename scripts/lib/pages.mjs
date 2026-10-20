@@ -1,5 +1,6 @@
 // The site's pages, rendered at build time from games/*.json. Plain template
 // functions; every value from a data file goes through esc().
+import { diskUrl } from './games.mjs';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 const SITE = "Setech Arcade";
@@ -59,7 +60,7 @@ export function indexPage(games) {
     root: "./",
     body: `<h1>Setech Arcade</h1>
 <p class="lede">Setech Game Studio's games for the Atari 8-bit computers, playable in your browser. Each one runs from its released disk image in atari800, an Atari 800XL emulator, on a PAL machine with 64 KB, just as on a real Atari 65XE.</p>
-<p class="lede">Best with a keyboard or a gamepad. Your best scores stay in this browser.</p>
+<p class="lede">Best with a keyboard or a gamepad. Your scores and saved progress stay in this browser.</p>
 <section class="games" aria-label="Games">
 ${cards}
 </section>`,
@@ -92,7 +93,7 @@ export function playPage(game, diskPath) {
 
 <section id="player" class="player" data-disk="${esc(diskPath)}" aria-label="${esc(game.title)}">
   <div id="stage" class="stage" tabindex="0" role="application"
-       aria-label="${esc(game.title)} game screen. Arrow keys move, Z or X fires, Space pauses.">
+       aria-label="${esc(game.title)} game screen. ${game.saveKind === "progress" ? "Arrow keys move, Z or X fires. F4 START, F3 SELECT, F2 OPTION." : "Arrow keys move, Z or X fires, Space pauses."}">
     <canvas id="screen" width="336" height="240" aria-hidden="true"></canvas>
     <button id="start" class="start primary" type="button" disabled>▶ Start game (sound on)</button>
   </div>
@@ -109,7 +110,7 @@ export function playPage(game, diskPath) {
 </section>
 <div class="toolbar">
   <button id="fullscreen" type="button">Fullscreen</button>
-  <button id="reset-score" class="danger" type="button">Reset best score</button>
+  <button id="reset-score" class="danger" type="button">${game.saveKind === "progress" ? "Reset saved progress" : "Reset best score"}</button>
   <button id="sound-retry" class="quiet" type="button" hidden>Sound unavailable — click to retry</button>
 </div>
 <p id="status" class="status-line" role="status" aria-live="polite"></p>
@@ -135,8 +136,9 @@ export function playPage(game, diskPath) {
     <h2 id="about-title">About the game</h2>
     <p>${esc(game.description)}</p>
     <p class="muted">${esc(game.studio)} · ${esc(game.year)} · ${esc(game.status)}</p>
-    <p><a href="${esc(game.links.repo)}">Source code</a> · <a href="${esc(game.links.releases)}">Releases</a>${game.links.howToPlay ? ` · <a href="${esc(game.links.howToPlay)}">How to play</a>` : ""}</p>
-    <p class="muted">${game.saves === "disk" ? "The game saves its best scores on its own disk; this site keeps that disk in your browser. A new version of the game starts with a fresh disk. " : ""}Licence: ${esc(game.licence.summary)} ${esc(game.licence.credit)}. <a href="../../credits/">Credits &amp; licences</a>.</p>
+    <p><a href="${esc(game.links.repo)}">Source code</a> · <a href="${esc(game.links.releases)}">Releases</a>${game.saveKind === "progress" ? ` · <a href="${esc(diskUrl(game))}">Download ATR</a>` : ""}${game.links.howToPlay ? ` · <a href="${esc(game.links.howToPlay)}">How to play</a>` : ""}</p>
+    ${game.saveKind === "progress" ? '<p class="muted">PAL Atari 800XL, 64 KB, BASIC OFF. A keyboard provides all controls, including pause, save and restart. Touch and gamepad provide movement and FIRE. Clearing site data removes your saved progress.</p>' : ""}
+    <p class="muted">${game.saves === "disk" ? `${game.saveKind === "progress" ? "The game saves your board and progress on its own disk; this site keeps that disk in your browser. A new version starts with a fresh disk. " : "The game saves its best scores on its own disk; this site keeps that disk in your browser. A new version of the game starts with a fresh disk. "}` : ""}Licence: ${esc(game.licence.summary)} ${esc(game.licence.credit)}. <a href="../../credits/">Credits &amp; licences</a>.</p>
   </section>
 </div>
 <script type="application/json" id="game-data">${data}</script>`,

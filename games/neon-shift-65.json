@@ -1,0 +1,75 @@
+{
+  "id": "neon-shift-65",
+  "title": "NEON SHIFT 65",
+  "tagline": "A service robot, 60 Sokoban puzzles and four animated industrial areas.",
+  "description": "Push every crate onto a dock across Energy, Hydroponic, Data Hub and Reactor. All 60 starting layouts have verified solutions. Undo up to 256 steps, restart a level, save from pause and Continue next time. Physical Atari/SIO2SD testing and owner listening remain unconfirmed.",
+  "studio": "Setech Game Studio",
+  "year": 2026,
+  "status": "Release v1.0.0",
+  "screenshots": [
+    {
+      "src": "media/neon-shift-65/energy.png",
+      "alt": "Energy \u2014 actual NEON SHIFT 65 gameplay"
+    },
+    {
+      "src": "media/neon-shift-65/hydro.png",
+      "alt": "Hydroponic H2 \u2014 actual NEON SHIFT 65 gameplay"
+    },
+    {
+      "src": "media/neon-shift-65/data.png",
+      "alt": "Data Hub \u2014 actual NEON SHIFT 65 gameplay"
+    },
+    {
+      "src": "media/neon-shift-65/reactor.png",
+      "alt": "Reactor R1 \u2014 actual NEON SHIFT 65 gameplay"
+    }
+  ],
+  "disk": {
+    "repo": "Setech-pl/neon-shift-65",
+    "tag": "v1.0.0",
+    "asset": "neon-shift65.atr",
+    "sha256": "a22992f1c4350d0e5c72150c6902aefdd2f485c3be5979f9da2a7bc2d32f3407"
+  },
+  "machine": {
+    "model": "800xl",
+    "video": "pal",
+    "basic": false
+  },
+  "saves": "disk",
+  "saveKind": "progress",
+  "controls": [
+    {
+      "action": "Move / push a crate",
+      "atari": "Joystick"
+    },
+    {
+      "action": "Menu select; undo in play; next level when solved",
+      "atari": "Fire"
+    },
+    {
+      "action": "Undo (including solved boards); save while paused",
+      "atari": "SELECT"
+    },
+    {
+      "action": "Restart the current level",
+      "atari": "OPTION"
+    },
+    {
+      "action": "Pause / resume",
+      "atari": "START"
+    }
+  ],
+  "links": {
+    "repo": "https://github.com/Setech-pl/neon-shift-65",
+    "releases": "https://github.com/Setech-pl/neon-shift-65/releases/tag/v1.0.0",
+    "howToPlay": "https://github.com/Setech-pl/neon-shift-65/blob/main/docs/how-to-play.md"
+  },
+  "licence": {
+    "summary": "Code: MIT License. Content and complete ATR: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). Service Current retains CC0; cc65 and upstream component notices apply. Names and marks reserved.",
+    "url": "https://github.com/Setech-pl/neon-shift-65/blob/main/LICENSE-ASSETS",
+    "credit": "(C) 2026 Marcin Krzetowski / Setech Game Studio"
+  },
+  "tests": {
+    "menuFrame": 1000
+  }
+}

@@ -230,7 +230,7 @@ async function persistDisk() {
   if (game.saves !== "disk") return;
   await store("readwrite", (s) => s.put(core.diskBytes(), SAVE_KEY));
   arcade.savedAtFrame = frame;
-  ui.saveStatus.textContent = "Best score saved in this browser.";
+  ui.saveStatus.textContent = game.saveKind === "progress" ? "Progress saved in this browser." : "Best score saved in this browser.";
 }
 function step(input) {
   core.frame(input);
@@ -313,7 +313,7 @@ ui.fullscreen.addEventListener("click", async () => {
 if (!document.fullscreenEnabled) ui.fullscreen.hidden = true;
 ui.resetScore.hidden = game.saves !== "disk";
 ui.resetScore.addEventListener("click", async () => {
-  if (!confirm("Forget the best score saved in this browser and restart the game?")) return;
+  if (!confirm(game.saveKind === "progress" ? "Forget saved progress in this browser and restart the game?" : "Forget the best score saved in this browser and restart the game?")) return;
   clearTimeout(saveTimer);
   running = false;
   await store("readwrite", (s) => s.delete(SAVE_KEY));
